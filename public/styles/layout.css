@@ -31,4 +31,7 @@ body {
  main {
   width: 90%;
   color: #545149;
+  /* display: flex;
+  align-items: center;
+  flex-direction: column; */
  }

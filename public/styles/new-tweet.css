@@ -1,0 +1,36 @@
+.new-tweet {
+  width: 100%;
+}
+
+.form-tweet {
+  display: block;
+  flex-direction: column;
+}
+
+.text-input-tweet {
+  width: 100%;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  height: 45px;
+  display: block;
+  border: none;
+  outline: none;
+  background: transparent;
+  resize: none;
+  border-bottom: 3px solid #000000;
+}
+
+.tweet-inputs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweet-btn {
+  font-family: 'Bungee', cursive;
+}
+
+input.tweet-btn {
+  background-color: #4152a1;
+  border: none;
+  color: #ffffff;
+}
