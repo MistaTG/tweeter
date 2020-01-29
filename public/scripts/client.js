@@ -24,7 +24,6 @@
 // ]
 
 const renderTweets = function(tweets) {
-  console.log(tweets);
   for (const tweet of tweets) {
     const results = createTweetElement(tweet);
     $('.container').append(results)
@@ -50,7 +49,6 @@ const createTweetElement = function(tweet) {
     const oneDay = 24 * 60 * 60 * 1000;
     diffDays = String(Math.round(Math.abs((tweetDate - today) / oneDay)) + ' days ago');
   }
-  console.log(diffDays);
   const markup = `
   <article class="tweet-container">
           <header class="article-tweet tweet-header">
@@ -78,7 +76,6 @@ const createTweetElement = function(tweet) {
 const loadTweets = function() {
   $.ajax('/tweets', {method: 'GET'})
   .then(function(data){
-    console.log('fetched data: ', data);
     renderTweets(data);
   })
 }
