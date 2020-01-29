@@ -30,6 +30,7 @@
     <nav>
       <span class="nav-logo">tweeter</span>
       <span class="nav-new-tweet"><b>write</b> a new tweet</span>
+      <img src="/images/dblArr.png" class="nav-new-tweet nav-icon"></img>
     </nav>
 
     <header class="top-header">
@@ -41,7 +42,7 @@
     <main class="container">
       <section class="new-tweet">
         <form class="form-tweet" method="POST" action="/tweets/">
-          <textarea class="form-input" name="text" placeholder="What are you humming about?"></textarea >
+          <textarea class="form-input" name="text" placeholder="What are you humming about?" autofocus></textarea >
           <button class="form-submit" type="submit" value="Tweet">tweet</button>
           <span class="form-counter">140</span>
         </form>
