@@ -1,11 +1,17 @@
-.topHeader {
-  height: 400px;
-  width: 100%;
-  margin-top: 120px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
+.top-header {
+  display: grid;
+  grid-template-columns: [headerStart] 1fr;
+  grid-template-rows: [headerLogo] 1fr [headerName] auto;
+  justify-items: center;
   align-items: center;
   background-image: url("../images/asfalt-dark.png");
   background-color: gainsboro;
+}
+
+.top-header-logo {
+  grid-area: headerLogo / headerStart;
+}
+
+.top-header-name {
+  grid-area: headerName / headerStart;
 }

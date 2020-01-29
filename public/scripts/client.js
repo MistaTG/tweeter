@@ -24,7 +24,7 @@ const data = [
 ]
 
 const renderTweets = function(tweets) {
-  for (tweet of tweets) {
+  for (const tweet of tweets) {
     const results = createTweetElement(tweet);
     $('.container').append(results)
   }

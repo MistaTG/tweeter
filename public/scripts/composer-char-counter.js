@@ -1,16 +1,18 @@
 $(document).ready(function() {
-  const maxCount = $(".counter.tweet-btn").html();
+  const maxCount = $(".form-counter").html();
 
-  $(".text-input-tweet").on("keyup", function() {
+  $(".form-input").on("keyup", function() {
+    const formCounter = $(this).siblings('.form-counter');
+
     if ($(this).val().length >= 0) {
       let count = maxCount - this.value.length;
-      $(this).next().find(".counter").html(count)
+      formCounter.html(count)
     }
 
     if (this.value.length >= maxCount) {
-      $(this).next().find(".counter.tweet-btn").addClass("red");
+      formCounter.addClass("red");
     } else {
-      $(this).next().find(".counter.tweet-btn").removeClass("red");
+      formCounter.removeClass("red");
     }
   });
 });

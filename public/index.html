@@ -29,27 +29,21 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span class="nav-logo">tweeter</span>
-      <span><b>write</b> a new tweet</span>
+      <span class="nav-new-tweet"><b>write</b> a new tweet</span>
     </nav>
 
-    <header class="topHeader">
-      <div>
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <div>
-          <h2>Your Name</h2>
-      </div>
-  </header>
+    <header class="top-header">
+      <img class="top-header-logo" src="/images/profile-hex.png"> 
+      <h2 class="top-header-name">Your Name</h2>
+    </header>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
         <form class="form-tweet" method="POST" action="/tweets/">
-          <textarea class="text-input-tweet" name="text" placeholder="What are you humming about?"></textarea >
-          <div class="tweet-inputs">
-            <input class="tweet-btn" type="submit" value="Tweet">
-            <span class="counter tweet-btn">140</span>
-        </div>
+          <textarea class="form-input" name="text" placeholder="What are you humming about?"></textarea >
+          <input class="form-submit" type="submit" value="Tweet">
+          <span class="form-counter">140</span>
         </form>
       </section>
     </main>
