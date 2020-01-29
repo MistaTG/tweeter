@@ -23,6 +23,7 @@
     <script type="text/javascript" src="scripts/client.js"></script>
     <script type="text/javascript" src="scripts/tweet-container.js"></script>
     <script type="text/javascript" src="scripts/composer-char-counter.js"></script>
+    <script type="text/javascript" src="scripts/ajax-request.js"></script>
   </head>
 
   <body>
@@ -42,7 +43,7 @@
       <section class="new-tweet">
         <form class="form-tweet" method="POST" action="/tweets/">
           <textarea class="form-input" name="text" placeholder="What are you humming about?"></textarea >
-          <input class="form-submit" type="submit" value="Tweet">
+          <button class="form-submit" type="submit" value="Tweet">tweet</button>
           <span class="form-counter">140</span>
         </form>
       </section>
