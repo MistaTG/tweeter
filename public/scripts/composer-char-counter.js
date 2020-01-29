@@ -2,15 +2,15 @@ $(document).ready(function() {
   const maxCount = $(".counter.tweet-btn").html();
 
   $(".text-input-tweet").on("keyup", function() {
-    if (this.value.length >= 0) {
+    if ($(this).val().length >= 0) {
       let count = maxCount - this.value.length;
-      $(".counter.tweet-btn").html(count);
+      $(this).next().find(".counter").html(count)
     }
 
     if (this.value.length >= maxCount) {
-      $(".counter.tweet-btn").addClass("red");
+      $(this).next().find(".counter.tweet-btn").addClass("red");
     } else {
-      $(".counter.tweet-btn").removeClass("red");
+      $(this).next().find(".counter.tweet-btn").removeClass("red");
     }
   });
 });

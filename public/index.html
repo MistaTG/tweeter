@@ -5,7 +5,7 @@
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
-    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+    <link rel="stylesheet" href="/vendor/normalize-8.0.1.css" type="text/css" />
 
     <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,700,700i&display=swap" rel="stylesheet" />
 
@@ -14,12 +14,14 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="scripts/client.js"></script>
+    <script type="text/javascript" src="scripts/tweet-container.js"></script>
     <script type="text/javascript" src="scripts/composer-char-counter.js"></script>
   </head>
 
@@ -30,11 +32,10 @@
       <span><b>write</b> a new tweet</span>
     </nav>
 
-    <header>
+    <header class="topHeader">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
-      <!-- <br> -->
       <div>
           <h2>Your Name</h2>
       </div>
@@ -44,19 +45,13 @@
     <main class="container">
       <section class="new-tweet">
         <form class="form-tweet" method="POST" action="/tweets/">
-          <textarea class="text-input-tweet" name="text" placeholder="What are you humming about?"></textarea>
+          <textarea class="text-input-tweet" name="text" placeholder="What are you humming about?"></textarea >
           <div class="tweet-inputs">
             <input class="tweet-btn" type="submit" value="Tweet">
-          <span class="counter tweet-btn">140</span>
+            <span class="counter tweet-btn">140</span>
         </div>
         </form>
       </section>
-      <h2>Lorem ipsum</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-      <h2>Lorem ipsum</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-      <h2>Lorem ipsum</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
     </main>
   </body>
 </html>

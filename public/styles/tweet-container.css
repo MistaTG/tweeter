@@ -1,0 +1,67 @@
+.tweet-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  border: 2px solid black;
+}
+
+.article-tweet {
+  display: flex;
+}
+
+.tweet-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.tweet-header-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.tweet-body {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.tweet-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+hr {
+  height: 2px; 
+  width: 100%;
+  background: black;
+  border: none;
+}
+
+.tweet-footer-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tweet-content {
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+}
+
+.user-img {
+  /* content:url(https://cdn1.iconfinder.com/data/icons/avatar-vol-9/512/8-512.png); */
+  height: 40px;
+  width: 40px;
+  margin-right: 0.5em;
+  margin-top: 0.2em;
+}
+
+.user-tag {
+  color: #86a1bb;
+}
