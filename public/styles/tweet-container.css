@@ -8,6 +8,15 @@
   border: 2px solid black;
 }
 
+article:hover {
+  font-weight: 700;
+  box-shadow: 5px 10px #86a1bb;
+}
+
+article:hover .tweet-header .user-tag{
+  visibility: visible;
+}
+
 .article-tweet {
   display: flex;
 }
@@ -64,4 +73,5 @@ hr {
 
 .user-tag {
   color: #86a1bb;
+  visibility: hidden;
 }

@@ -85,5 +85,6 @@ const loadTweets = function() {
 
 $(document).ready(function() {
   loadTweets();
+  // renderTweets(data)
 })
 
