@@ -15,7 +15,10 @@ $(document).ready(function() {
         url: "/tweets",
         data: $(this).serialize(),
       }).then(function(msg) {
-        alert("Data saved: " + msg)
+        $.ajax('/tweets', {method: 'GET'})
+        .then(function(data){
+          renderTweets([data[data.length - 1]]);
+        })
       })
     } else {
       alert('Please keep your tweet to below 140 characters')
