@@ -17,7 +17,6 @@ nav {
 
 .nav-new-tweet {
   grid-area: 1 / navNewTweet;
-  /* margin-bottom: 1em; */
 }
 
 .nav-new-tweet.nav-icon {
@@ -27,7 +26,11 @@ nav {
   padding-bottom: 1em;
 }
 
-.nav-new-tweet.nav-icon:hover {
-  /* align-self: baseline; */
-  padding-bottom: 0.5em;
+.nav-icon {
+  grid-area: 1 / navNewTweet;
+  margin-top: 2em;
+}
+
+.nav-icon:hover {
+  margin-top: 2.5em;
 }

@@ -1,14 +1,22 @@
-
 $(document).ready(function() {
   
   $('.form-tweet').on('submit', function() {
     event.preventDefault();
     const userData = $(this).find('textarea').val();
     const dataLength = String(userData).length;
-    console.log(dataLength)
+    const errContainer = $(this).parent().prev();
+    // Need to pull out sliding logic out of here
+    errContainer.slideUp();
 
     if (dataLength === 0) {
-      alert('Please enter a tweet');
+      errContainer.slideDown({complete: function() {
+        if (errContainer.children()[0].textContent !== '') {
+          errContainer.children().empty();
+        }
+        if (errContainer.children()[0].textContent === '') {
+          errContainer.children().append("Please enter a tweet")
+        }
+      }})
     } else if (dataLength <= 140) {
       $.ajax({
         method: "POST",
@@ -19,11 +27,20 @@ $(document).ready(function() {
         .then(function(data){
           renderTweets([data[data.length - 1]]);
         })
+        errContainer.children().empty();
+        $('textarea').val('');
+        // console.log(this)
       })
     } else {
-      alert('Please keep your tweet to below 140 characters')
+      errContainer.slideDown({complete: function() {
+        if (errContainer.children()[0].textContent !== '') {
+          errContainer.children().empty();
+        }
+        if (errContainer.children()[0].textContent === '') {
+          errContainer.children().append("Please keep your tweet to below 140 characters")
+        }
+      }})
     }
-    // console.log($(this).serialize())
   })
 })
 

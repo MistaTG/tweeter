@@ -15,14 +15,18 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/error-msg.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/floating-button.css" type="text/css" />
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+    <script src="https://kit.fontawesome.com/3449331f18.js" crossorigin="anonymous"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="scripts/client.js"></script>
     <script type="text/javascript" src="scripts/composer-char-counter.js"></script>
     <script type="text/javascript" src="scripts/ajax-request.js"></script>
+    
   </head>
 
   <body>
@@ -30,7 +34,7 @@
     <nav>
       <span class="nav-logo">tweeter</span>
       <span class="nav-new-tweet"><b>write</b> a new tweet</span>
-      <img src="/images/dblArr.png" class="nav-new-tweet nav-icon"></img>
+      <i class="fa fa-angle-double-down  nav-icon"></i>
     </nav>
 
     <header class="top-header">
@@ -38,8 +42,12 @@
       <h2 class="top-header-name">Your Name</h2>
     </header>
 
+    
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <section class="error-msg">
+        <p class="error-txt"></span>
+      </section>
       <section class="new-tweet">
         <form class="form-tweet" method="POST" action="/tweets/">
           <textarea class="form-input" name="text" placeholder="What are you humming about?" autofocus></textarea >
@@ -49,5 +57,8 @@
       </section>
       <div class="articles"></div>
     </main>
+    <a class="float">
+      <i class="fa fa-angle-double-up my-float"></i>
+    </a>
   </body>
 </html>

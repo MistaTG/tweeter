@@ -56,9 +56,25 @@ $(document).ready(function() {
   loadTweets();
   
   $('.nav-icon').on('click', function() {
+    $('.error-msg').slideUp();
     $('.new-tweet').slideToggle({complete: function() {
       $('.form-input').focus();
     }});
+  })
+
+  $('.float').on('click', function() {
+    window.scroll({ top: 0, left: 0, behavior: 'smooth'});
+  })
+
+  $(window).on('scroll', function() {
+    if ($(window).scrollTop() - $('article').offset()['top'] > 0) {
+      $('.float').css('visibility', 'visible');
+    } else {
+      $('.float').css('visibility', 'hidden');
+    }
+    if ($(window).scrollTop() === 0) {
+      $('.form-input').focus();
+    }
   })
 })
 

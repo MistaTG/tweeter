@@ -1,0 +1,14 @@
+.error-msg {
+  align-self: center;
+  border: 2px solid red;
+  background-color: lightcoral;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  display: none;
+}
+
+.error-txt {
+  text-align: center;
+  color: red;
+  margin: 0;
+}
