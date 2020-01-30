@@ -20,17 +20,50 @@ body {
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
   display: flex;
-  flex-direction: column;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- main {
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  color: #545149;
+ @media screen and (min-width: 1024px) {
+.top-header {
+    margin-top: 9em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    max-width: 25%;
+    height: 14em;
+  }
+  
+  main {
+    margin-top: 9em;
+    margin-left: auto;
+    margin-right: auto;
+    justify-self: center;
+    width: 60%;
+  }
+
+  textarea.form-input {
+    margin-top: 0;
+  }
+  
+ }
+
+ @media screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    flex-direction: column;
+  }
+
+  .top-header {
+    margin-bottom: 1em;
+  }
+   
+  main {
+    align-self: center;
+    /* display: flex;
+    flex-direction: column; */
+    width: 90%;
+    color: #545149;
+   }
  }

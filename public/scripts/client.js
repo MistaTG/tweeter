@@ -55,6 +55,8 @@ const loadTweets = function() {
 $(document).ready(function() {
   loadTweets();
   
+  $('.new-tweet').hide();
+  
   $('.nav-icon').on('click', function() {
     $('.error-msg').slideUp();
     $('.new-tweet').slideToggle({complete: function() {
@@ -69,8 +71,12 @@ $(document).ready(function() {
   $(window).on('scroll', function() {
     if ($(window).scrollTop() - $('article').offset()['top'] > 0) {
       $('.float').css('visibility', 'visible');
+      $('.nav-new-tweet').css('visibility', 'hidden');
+      $('.nav-icon').css('visibility', 'hidden');
     } else {
       $('.float').css('visibility', 'hidden');
+      $('.nav-new-tweet').css('visibility', 'visible');
+      $('.nav-icon').css('visibility', 'visible');
     }
     if ($(window).scrollTop() === 0) {
       $('.form-input').focus();
