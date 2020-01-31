@@ -43,9 +43,3 @@ nav {
     background-color: #4056A1;
   }
 }
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  nav {
-    /* color: #FFFFFF; */
-  }
-}

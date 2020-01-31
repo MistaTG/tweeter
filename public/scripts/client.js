@@ -13,14 +13,19 @@ const datesAreOnSameDay = (first, second) =>
 const createTweetElement = function(tweet) {
   const tweetDate = new Date(tweet.created_at);
   const today = new Date();
+  const oneDay = 24 * 60 * 60 * 1000;
+  const daysApart = Math.round(Math.abs((tweetDate - today) / oneDay));
   let diffDays = '';
 
-  if (datesAreOnSameDay(tweetDate, today)) {
+  if (daysApart === 0) {
     diffDays = 'today';
+  } else if (daysApart === 1) {
+    diffDays = 'yesterday';
   } else {
-    const oneDay = 24 * 60 * 60 * 1000;
-    diffDays = String(Math.round(Math.abs((tweetDate - today) / oneDay)) + ' days ago');
+    diffDays = daysApart + ' days ago';
   }
+
+  console.log(diffDays)
   const markup = `
   <article class="tweet-container">
           <header class="article-tweet tweet-header">
@@ -37,7 +42,11 @@ const createTweetElement = function(tweet) {
             <hr />
             <div class="tweet-footer-bottom">
               <p class="tweet-content">${diffDays}</p>
-              <p class="tweet-content">links to media</p>
+              <div class="tweet-content">
+              <i class="fas fa-flag"></i>
+              <i class="fas fa-retweet"></i>
+              <i class="fas fa-thumbs-up"></i>
+              </div>
             </div>
           </footer>
         </article>`;
@@ -54,6 +63,9 @@ const loadTweets = function() {
 
 $(document).ready(function() {
   loadTweets();
+
+  // var yesterday = new Date(new Date().setDate(new Date().getDate()-1));
+  // console.log(new Date(1580345732000), 'yesteray')
   
   $('.new-tweet').hide();
   

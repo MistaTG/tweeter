@@ -29,7 +29,7 @@ $(document).ready(function() {
         })
         errContainer.children().empty();
         $('textarea').val('');
-        // console.log(this)
+        $('.form-counter').html(140)
       })
     } else {
       errContainer.slideDown({complete: function() {

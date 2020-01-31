@@ -31,6 +31,7 @@ body {
     margin-top: 9em;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 0.5em;
     width: 25%;
     max-width: 25%;
     height: 14em;
@@ -50,19 +51,18 @@ body {
   
  }
 
- @media screen and (min-width: 768px) and (max-width: 1024px) {
+ @media screen and (max-width: 1024px) {
   body {
     flex-direction: column;
   }
 
   .top-header {
+    padding-top: 2em;
     margin-bottom: 1em;
   }
    
   main {
     align-self: center;
-    /* display: flex;
-    flex-direction: column; */
     width: 90%;
     color: #545149;
    }
