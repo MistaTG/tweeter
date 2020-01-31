@@ -1,6 +1,13 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone. Has a jump to top button that appears if you scroll past the first tweet.
+Tweeter is a simple, single-page Twitter clone that is responsive. Has a jump to top button that appears if you scroll past the first tweet.
+
+## Screenshots
+
+!["Screenshot of Desktop page"](https://github.com/MistaTG/tweeter/blob/master/public/images/Desktop-page.png?raw=true)
+!["Screenshot of Desktop page Scrolled"](https://github.com/MistaTG/tweeter/blob/master/public/images/Desktop-scrolled.png?raw=true)
+!["Screenshot of Mobile page"](https://github.com/MistaTG/tweeter/blob/master/public/images/Mobile-page.png?raw=true)
+!["Screenshot of Mobile page Scrolled"](https://github.com/MistaTG/tweeter/blob/master/public/images/Mobile-page-scrolled.png?raw=true)
 
 ## Getting Started
 
