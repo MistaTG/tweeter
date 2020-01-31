@@ -37,6 +37,7 @@
       <i class="fa fa-angle-double-down  nav-icon"></i>
     </nav>
 
+    <!-- Header with User image and Name -->
     <header class="top-header">
       <img class="top-header-logo" src="/images/profile-hex.png"> 
       <h2 class="top-header-name"><b>Austin</b> Nazareth</h2>
@@ -45,9 +46,11 @@
     
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <!-- Error message container -->
       <section class="error-msg">
         <p class="error-txt"></span>
       </section>
+      <!-- New tweet form -->
       <section class="new-tweet">
         <form class="form-tweet" method="POST" action="/tweets/">
           <textarea class="form-input" name="text" placeholder="What are you humming about?" autofocus></textarea >
@@ -55,8 +58,10 @@
           <span class="form-counter">140</span>
         </form>
       </section>
+      <!-- User Content -->
       <div class="articles"></div>
     </main>
+    <!-- Floating button to jump to top -->
     <a class="float">
       <i class="fa fa-angle-double-up my-float"></i>
     </a>

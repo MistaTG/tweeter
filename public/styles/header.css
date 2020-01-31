@@ -1,3 +1,5 @@
+/* Styling for the header Container and children, has Media queries in the layout.css file */
+
 .top-header {
   display: grid;
   grid-template-columns: [headerStart] 1fr;

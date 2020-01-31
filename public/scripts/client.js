@@ -1,16 +1,14 @@
+// The main renderTweets function that appends each Object to the DOM
 const renderTweets = function(tweets) {
   for (const tweet of tweets) {
     const results = createTweetElement(tweet);
-    $('.articles').prepend(results)
+    $('.articles').prepend(results);
   }
-}
+};
 
-const datesAreOnSameDay = (first, second) =>
-    first.getFullYear() === second.getFullYear() &&
-    first.getMonth() === second.getMonth() &&
-    first.getDate() === second.getDate();
-
+// Parses over all the data passed in and gives back an html article element with the data from a template
 const createTweetElement = function(tweet) {
+  // Day handling logic
   const tweetDate = new Date(tweet.created_at);
   const today = new Date();
   const oneDay = 24 * 60 * 60 * 1000;
@@ -25,7 +23,7 @@ const createTweetElement = function(tweet) {
     diffDays = daysApart + ' days ago';
   }
 
-  console.log(diffDays)
+  console.log(diffDays);
   const markup = `
   <article class="tweet-container">
           <header class="article-tweet tweet-header">
@@ -52,34 +50,36 @@ const createTweetElement = function(tweet) {
         </article>`;
 
   return markup;
-}
+};
 
+// Does an ajax call to get the tweet data and pass it along
 const loadTweets = function() {
   $.ajax('/tweets', {method: 'GET'})
-  .then(function(data){
-    renderTweets(data);
-  })
-}
+    .then(function(data) {
+      renderTweets(data);
+    });
+};
 
 $(document).ready(function() {
   loadTweets();
-
-  // var yesterday = new Date(new Date().setDate(new Date().getDate()-1));
-  // console.log(new Date(1580345732000), 'yesteray')
   
+  // Hide the form on load, couldnt use display: none in css since was already using display: grid;
   $('.new-tweet').hide();
   
+  // Adds functionality to the nav button
   $('.nav-icon').on('click', function() {
     $('.error-msg').slideUp();
     $('.new-tweet').slideToggle({complete: function() {
       $('.form-input').focus();
     }});
-  })
+  });
 
+  // Adds functionality to the jump to top button
   $('.float').on('click', function() {
     window.scroll({ top: 0, left: 0, behavior: 'smooth'});
-  })
+  });
 
+  // Hides and shows the nav button and jump to top button on scroll
   $(window).on('scroll', function() {
     if ($(window).scrollTop() - $('article').offset()['top'] > 0) {
       $('.float').css('visibility', 'visible');
@@ -93,6 +93,6 @@ $(document).ready(function() {
     if ($(window).scrollTop() === 0) {
       $('.form-input').focus();
     }
-  })
-})
+  });
+});
 

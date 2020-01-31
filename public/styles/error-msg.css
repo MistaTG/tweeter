@@ -1,3 +1,5 @@
+/* Styling for the Error container and message */
+
 .error-msg {
   align-self: center;
   border: 2px solid red;
