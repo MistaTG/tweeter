@@ -7,7 +7,7 @@ Tweeter is a simple, single-page Twitter clone that is responsive. Has a jump to
 !["Screenshot of Desktop page"](https://github.com/MistaTG/tweeter/blob/master/public/images/Desktop-page.png?raw=true)
 !["Screenshot of Desktop page Scrolled"](https://github.com/MistaTG/tweeter/blob/master/public/images/Desktop-scrolled.png?raw=true)
 !["Screenshot of Mobile page"](https://github.com/MistaTG/tweeter/blob/master/public/images/Mobile-page.png?raw=true)
-!["Screenshot of Mobile page Scrolled"](https://github.com/MistaTG/tweeter/blob/master/public/images/Mobile-page-scrolled.png?raw=true)
+!["Screenshot of Mobile page Scrolled"](https://github.com/MistaTG/tweeter/blob/master/public/images/Mobile-scrolled.png?raw=true)
 
 ## Getting Started
 
